@@ -1,0 +1,1 @@
+{"index.js":"function palindrome(str) {\n  // Good luck!\n\n  let fccRegex = /[\\W_]/g;\n \n  let someStr = str.toLowerCase().replace(fccRegex, \"\");\n\n \n\n  let reversed = someStr.split('').reverse().join('');\n  if(reversed === someStr){\n    return true;\n    } else{\n      return false\n      }\n}\n\n\n\npalindrome(\"racecar\");"}

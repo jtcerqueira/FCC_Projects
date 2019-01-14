@@ -1,0 +1,225 @@
+/* CSS file Bass Store FCC Project */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	padding: 30px;
+	margin-top: 80px;
+}
+/* Nav Bar */
+
+			
+			/*header*/
+			
+		   header {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 10;
+				background-color: whitesmoke;
+				overflow: hidden;		   
+		   }
+		   
+		   #header-img {
+				float: left;
+				display: flex;
+				margin-top: 5px;
+				margin-left: 5%;
+				width: 70px;
+				height: 70px;
+				transition: 0.5s ease		   
+		   }
+			
+			#logo-brand {
+				display: flex;
+				float: left;			
+			}		   
+		   
+		   #logo-name {
+		   	margin-left: 15px; 
+				font-size: 30px;
+			}					
+		   
+			#nav-bar {
+				position: relative;
+				height: 80px;
+				width: 100%;
+				transition: 0.5s ease;
+				border-bottom: 1px solid black;			
+			}
+			
+			#positioning {
+				margin: 0;
+				padding: 10px 0;
+				display: inline-block;
+				float: right;
+				margin-right: 5%;			
+			}
+			
+			
+			.nav-link {
+				text-decoration: none;
+				color: inherit;
+				list-style-type: none;
+				display: inline-block;
+					
+					font-size: 18px;
+					padding: 5px;
+					font-weight: 300;
+					margin-right: 20px;
+					transition: 0.5s ease;						
+			}
+			
+			.nav-link:hover {
+				color: #23282D;
+			}
+
+/* Main */
+
+
+#title {
+	text-align: center;
+	margin: 20px 0 10px 0;
+}
+
+#form {
+	text-align: center;
+	margin: 5px; 
+}
+
+#email {
+	height: 30px;
+	width: 320px;
+}
+
+#submit {
+	margin: 5px;
+	background-color: yellowgreen;
+	height: 35px;
+	width: 80px;
+}
+
+#features {
+	margin: 30px 10px 30px 10px; 
+}
+
+.flex {
+	display: flex;
+}
+
+.fas {
+	margin: 26px;
+	color: greenyellow;
+}
+
+.describe {
+	margin: 26px;
+	padding-top: 20px;
+}
+
+#how_it_works {
+	text-align: center;
+}
+
+#pricing {
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: center;
+	margin: 20px;
+}
+
+.price{
+	display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   width: calc(100%  / 3);
+   margin: 10px;
+   border: 1px solid #000;
+   border-radius: 3px;	
+}
+
+.heading {
+	background-color: #D3D3D3;
+	margin: 8px;
+	padding: 5px;
+}
+
+.description {
+	margin: 10px;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+button {
+	text-align: center;
+	margin: 15px;
+	height: 40px;
+	width: 100px;
+	background-color: yellow;
+}
+
+/* Footer */
+
+footer {
+	margin-top: 20px;
+	background-color: #D3D3D3;
+}
+
+footer ul {
+	display: inline-block;
+	list-style-type: none;
+	float: right;
+}
+
+footer ul li {
+	display: inline-block;
+	margin: 17px; 
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: black; 	
+}
+
+
+/* Media Queries */
+
+@media (max-width: 600px){	
+		
+	#logo-brand { position: relative; left: 120px;}
+	
+	nav ul { position: relative; right: 90px;}
+	
+	#email { width: 85%;}
+	
+	#pricing { flex-direction: column;}
+  
+  .price { max-width: 300px; width: 100%; margin: 0 auto; margin-bottom: 15px;}
+}
+	
+
+
+@media (max-width: 500px){
+	
+	#logo-brand { position: relative; left: 95px;}
+	 
+	nav ul { position: relative; right: 50px;}
+	
+}
+
+@media (max-width: 400px){
+	
+	#logo-brand { position: relative; left: 60px;}
+	
+	nav ul { position: relative; right: 10px; color:}
+		
+}
+
+@media (max-width: 300px){
+	
+	nav ul {	position: relative; right: 0px;}
+}

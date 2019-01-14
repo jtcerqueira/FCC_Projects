@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Done with references from the FCC forum site and W3C */
+
+body{
+	background-color: black;
+	color: white;
+}
+
+#title {
+	text-align: center;
+}
+
+#wrapper {
+	background-color: whitesmoke;
+	color: black;
+	width: 75%;
+	margin-left: 130px;
+}
+
+#description {
+	text-align: center;
+	font-style: 'Roboto';
+	font-size: 20px;
+}
+
+.align-left {
+	display: inline-block;
+	text-align: left;
+	width: 48%;
+	vertical-align: middle; 
+	margin: 5px;
+}
+
+.tags {
+	display: inline-block;
+	text-align: right;
+	width: 40%;
+	padding: 5px;
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+#extra {
+	height: 120px;
+	width: 380px;
+	margin: 10px;
+}
+
+#submit {
+  background-color: greenyellow;
+  border-radius: 2px;
+  color: white;
+  font-size: 17px;
+  height: 40px;
+  width: 87px;
+  margin: 10px;
+  border: 0.5px solid;
+  text-align: center;
+  margin-left: 300px;
+}

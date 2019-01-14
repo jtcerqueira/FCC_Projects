@@ -1,0 +1,205 @@
+/* CSS file to portfolio.html
+	Should contain at least one media query
+ */
+ 
+ @import url('https://fonts.googleapis.com/css?family=Unlock');
+ 
+*{
+	box-sizing: border-box;			
+}		
+			 
+ /*header*/
+			
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	background-color: blueviolet;		   
+}
+
+/* Navbar */
+
+label, input {
+	visibility: hidden;
+}
+		   
+#logo {
+	float: left;
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 5%;
+	width: 70px;
+	height: 70px;
+	transition: 0.5s ease		   
+}
+
+header #logo img {
+	display: none;		   
+}					
+
+nav {
+	position: relative;
+	height: 80px;
+	width: 100%;
+	transition: 0.5s ease;			
+}
+
+#inner-nav {
+	margin: 0;
+	padding: 10px 0;
+	display: inline-block;
+	float: right;
+	margin-right: 5%;			
+}
+
+.item {
+	list-style-type: none;
+	display: inline-block;
+		
+		font-size: 18px;
+		padding: 5px;
+		font-weight: 300;
+		line-height: 50px;
+		margin-right: 20px;
+		transition: 0.5s ease;			
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: inherit;			
+}
+
+nav ul li a:hover {
+	color: #838996;
+	text-decoration: none;
+}
+
+/*Main Section*/
+ 
+#welcome-section {
+	background-color: blueviolet;
+   height: 100vh;
+   width: 100.8%;
+}
+
+#banner-message {
+	text-align: center;
+	position: relative;
+	top: 250px;
+	color: whitesmoke;
+	font-size: 43px;
+	font-family: 'Unlock', Verdana;
+	text-shadow: 1px 1px 1px; 
+}
+
+/*Projects Section*/
+
+#projects {
+	background-color: rgb(211,212,181); 
+	margin: 0;
+}
+
+.section-title {
+	font-size: 70px;
+	font-family: 'Unlock', Verdana;
+	text-align: center;
+}
+
+
+figcaption {
+	text-align: center;
+	font-size: 18px;
+}
+
+#projects {
+	margin-top: 30px;
+}
+
+#projects img {
+	height: 230px;
+	width: 300px;
+}
+
+.col-sm-3 {
+	margin: 20px 40px;
+}
+
+/*Contact Section*/
+
+#contact {
+	background-color: blanchedalmond;
+}
+
+#contact-tile {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin: 20px;
+}
+
+.change .two {
+	display:none;
+}
+.change:hover .one {
+	display: none;
+}
+
+.change:hover .two {
+	display: inline;
+}
+
+.change {
+	width: 290px;
+	height: 290px;
+	border-radius: 50%;
+	font-size:80px;
+	font-family: 'Unlock', Times, Verdana;
+	color: #fff;
+	line-height: 280px;
+	text-align: center;
+	background:#000;
+}
+
+.change img {
+	height: 280px;
+	width: 280px;
+	border-radius: 50%;
+}
+
+footer {
+	background-color: #838996;
+	text-align: center;
+	height: 50px;
+}
+
+footer p {
+	margin-top: 23px;
+	padding-top: 10px;
+	font-size: 20px;
+	font-weight: 300;
+	font-family: Times;
+	color: white;
+}
+
+/* Media Queries */
+
+@media (max-width: 700px) {
+	
+	label, input {visibility: visible; font-size: 16px; font-family: 'Unlock', Times; font-weight: 300;}
+		
+	label { cursor: pointer;}
+	
+	#menu-toggle {display: none; /* hide the checkbox */}
+	
+	#inner-nav {display: none;}
+	
+	#menu-toggle:checked + #inner-nav {display: block;}		
+	
+	#contact-tile {display: block; text-align: center;}
+	
+	.change .two {display: none;}
+	
+	.change:hover .one {visibility: visible; display: block;}
+
+	.change:hover .two {visibility: hidden; display: none; overflow: hidden;}
+}

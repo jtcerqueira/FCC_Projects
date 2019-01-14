@@ -1,0 +1,97 @@
+/* css file to tech.html */
+
+/* imports */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400');
+
+/* General values */
+
+p, header, h2, li, ol {
+	font-family: 'Open Sans', sans-serif, verdana;
+}
+
+header {
+	font-size: 30px;
+}
+
+#navbar {
+	position: fixed;
+	left: 0;
+	top: 8px;
+	width: 24%;
+	float: left;
+	border-right: solid gray 2px;
+	text-align: center;
+	overflow: scroll;
+	height: 100%;
+}
+
+#main-doc {
+	background-color: #D3D3D3;
+	margin: 1px;
+	width: 75%;
+	height: 100%;
+	float: right;
+}
+
+/* Navbar values */
+
+label, input {
+	visibility: hidden;
+}
+
+#navbar li {
+	list-style-type: none;
+	border: solid black 1px;
+ 	width: 119%;
+ 	height: 50px;
+ 	position: relative;
+ 	right: 40px; 	
+}
+
+#navbar a {
+	text-decoration: none; 
+}
+
+/* Main tag Values */
+
+code {
+	color: red;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px){	
+	
+	#navbar {
+		width: 100%;
+		background-color: whitesmoke;
+		position: relative;
+		top: 0;
+		overflow: visible;	
+	}
+	
+	label, input {
+	visibility: visible;
+}
+		
+	label {
+		cursor: pointer;
+	}
+	#menu-toggle {
+		display: none; /* hide the checkbox */
+	}
+	
+	#menu {
+	  	display: none;
+	}
+	
+	#menu-toggle:checked + #menu {
+		display: block;
+	}	
+	
+	#main-doc {
+		width: 100%;
+	}
+	
+}

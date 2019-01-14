@@ -1,0 +1,728 @@
+<!DOCTYPE HTML>
+
+
+<head>
+	<title>FCC Project Kotlin Doc</title>
+	<meta charset="utf-8">
+	<meta name="viwport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="tech.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	 integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	<nav id="navbar">
+		<header>Kotlin Doc</header>
+		<label for="menu-toggle">Click me to toggle menu</label>
+		<input type="checkbox" id="menu-toggle"/>
+		<ul id="menu">
+			<a class="nav-link" href="#introduction"><li>Introduction</li></a>
+			<a class="nav-link" href="#server_side"><li>Server Side</li></a>
+			<a class="nav-link" href="#frameworks"><li>Frameworks</li></a>
+			<a class="nav-link" href="#deployment_of_server_side"><li>Deployment of Server Side</li></a>
+			<a class="nav-link" href="#users_of_server_side"><li>Users of Server Side</li></a>
+			<a class="nav-link" href="#basic_types"><li>Basic Types</li></a>		
+			<a class="nav-link" href="#numbers"><li>Numbers</li></a>
+			<a class="nav-link" href="#characters"><li>Characters</li></a>
+			<a class="nav-link" href="#booleans"><li>Booleans</li></a>
+			<a class="nav-link" href="#arrays"><li>Arrays</li></a>
+			<a class="nav-link" href="#unsigned_integers"><li>Unsigned Integers</li></a>
+			<a class="nav-link" href="#strings"><li>Strings</li></a>
+			<a class="nav-link" href="#next_steps"><li>Next Steps</li></a>
+		</ul>
+	</nav>
+	
+	
+	
+	<main id="main-doc">
+	
+		<section class="main-section" id="introduction">
+			<header>Introduction</header>
+			<article>
+
+				<p>Kotlin is an OSS statically typed programming language that targets the JVM, Android, JavaScript
+				 and Native. It’s developed by <a href="http://www.jetbrains.com">JetBrains</a>. The project started in 2010 and was open source from very 
+				 early on. The first official 1.0 release was in February 2016.</p>
+				
+				<p>The currently released version is 1.3.10, published on November 14, 2018.</p>
+				
+				<p>Kotlin is free, has been free and will remain free. It is developed under the Apache 2.0 
+				license and the source code is available on <a href="https://github.com/jetbrains/kotlin">GitHub</a>.</p>
+				
+				<p>Kotlin has both object-oriented and functional constructs. You can use it in both<a href="https://en.wikipedia.org/wiki/Object-oriented_programming"> OO</a> and<a href="https://en.wikipedia.org/wiki/Functional_programming"> FP styles</a>,
+				 or mix elements of the two. With first-class support for features such as higher-order functions, 
+				 function types and lambdas, Kotlin is a great choice if you’re doing or exploring functional programming.</p>
+				
+				<p>Some advantages of Kotlin over Java is that it is more concise. Rough estimates indicate approximately
+				 a 40% cut in the number of lines of code. It’s also more type-safe, e.g. support for non-nullable types
+				 makes applications less prone to <a href="https://en.wikipedia.org/wiki/Null_pointer">NPE’s</a>. Other features including smart casting, higher-order functions, 
+				 extension functions and lambdas with receivers provide the ability to write expressive code as well as 
+				 facilitating creation of DSL.</p>
+				 
+				 <p>Kotlin is 100% <a href="https://en.wikipedia.org/wiki/Interoperability">interoperable</a> with the Java programming language and major emphasis has been placed
+				  on making sure that your existing codebase can interact properly with Kotlin. You can easily call Kotlin 
+				  code from Java and Java code from Kotlin. This makes adoption much easier and lower-risk. There’s also an
+				  automated Java-to-Kotlin converter built into the IDE that simplifies migration of existing code.</p>
+				  			
+			</article>
+		</section>	
+		
+		<section class="main-section" id="server_side">
+			<header>Server Side</header>
+			<article>
+			
+				<p>Kotlin is a great fit for developing server-side applications, allowing to write concise and expressive code
+				 while maintaining full compatibility with existing Java-based technology stacks and a smooth learning curve:</p>
+				 
+				 <ol>
+					<li>Expressiveness: Kotlin's innovative language features, such as its support for type-safe builders and delegated properties, help build powerful and easy-to-use abstractions.</li>			 
+					<li>Scalability: Kotlin's support for coroutines helps build server-side applications that scale to massive numbers of clients with modest hardware requirements.</li>
+					<li>Interoperability: Kotlin is fully compatible with all Java-based frameworks, which lets you stay on your familiar technology stack while reaping the benefits of a more modern language.</li>
+					<li>Migration: Kotlin supports gradual, step by step migration of large codebases from Java to Kotlin. You can start writing new code in Kotlin while keeping older parts of your system in Java.</li>
+					<li>Tooling: In addition to great IDE support in general, Kotlin offers framework-specific tooling (for example, for Spring) in the plugin for IntelliJ IDEA Ultimate.</li>
+					<li>Learning Curve: For a Java developer, getting started with Kotlin is very easy. The automated Java to Kotlin converter included in the Kotlin plugin helps with the first steps. Kotlin Koans offer a guide through the key features of the language with a series of interactive exercises.</li>
+				 </ol>
+				 
+			</article>			
+		</section>
+		
+		<section class="main-section" id="frameworks">
+			<header>Frameworks</header>
+			<article>
+				<ul>
+					<li>
+						<p><a href="https://spring.io">Spring</a> makes use of Kotlin's language features to offer <a href="https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0">more concise APIs</a>,
+						starting with version 5.0. The <a href="https://start.spring.io/#!language=kotlin">online project generator</a> allows to quickly generate a new project in Kotlin.</p>
+					</li>
+					
+					<li>
+						<p><a href="http://vertx.io">Vert.x</a>, a framework for building reactive Web applications on the JVM, offers <a href="https://github.com/vert-x3/vertx-lang-kotlin">dedicated support</a>
+						for Kotlin, including <a href="http://vertx.io/docs/vertx-core/kotlin/">full documentation</a>.</p>
+					</li>
+					
+					<li>
+						<p><a href="https://github.com/kotlin/ktor">Ktor</a> is a framework built by JetBrains for creating Web applications in Kotlin, making use of coroutines for high scalability and offering an easy-to-use and idiomatic API.</p>
+					</li>
+					
+					<li>
+						<p><a href="https://github.com/kotlin/kotlinx.html">kotlinx.html</a> is a DSL that can be used to build HTML in a Web application.
+						It serves as an alternative to traditional templating systems such as JSP and FreeMarker.</p>
+					</li>
+					
+					<li>
+						<p>The available options for persistence include direct JDBC access, JPA, as well as using NoSQL databases through their Java drivers.
+						For JPA, the <a href="/docs/reference/compiler-plugins.html#jpa-support">kotlin-jpa compiler plugin</a> adapts
+						Kotlin-compiled classes to the requirements of the framework.</p>
+					</li>
+				</ul>		
+						
+			</article>		
+		</section>
+		
+		<section class="main-section" id="deployment_of_server_side">
+			<header>Deployment of Server Side</header>
+			<article>
+			
+				<p>Kotlin applications can be deployed into any host that supports Java Web applications, including Amazon Web Services,
+					Google Cloud Platform and more.</p>
+
+				<p>To deploy Kotlin applications on <a href="https://www.heroku.com">Heroku</a>, you can follow the <a href="https://devcenter.heroku.com/articles/getting-started-with-kotlin">official Heroku tutorial</a>.</p>
+
+				<p>AWS Labs provides a <a href="https://github.com/awslabs/serverless-photo-recognition">sample project</a> showing the use of Kotlin
+					for writing <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> functions.</p>
+			</article>				
+		</section>
+		
+		<section class="main-section" id="users_of_server_side">
+		<header>Users of Server Side</header>
+			<article>
+					<p><a href="https://www.corda.net/">Corda</a> is an open-source distributed ledger platform, supported by major
+						banks, and built entirely in Kotlin.</p>
+	
+					<p><a href="https://account.jetbrains.com/">JetBrains Account</a>, the system responsible for the entire license sales and validation
+						process at JetBrains, is written in 100% Kotlin and has been running in production since 2015 with no major issues.</p>
+						
+			</article>	
+		</section>
+			
+		<section class="main-section" id="basic_types">
+			<header>Basic Types</header>
+			<article>
+				<p>In Kotlin, everything is an object in the sense that we can call member functions and properties on any variable.
+				Some of the types can have a special internal representation - for example, numbers, characters and booleans can be
+				represented as primitive values at runtime - but to the user they look like ordinary classes. 
+				In this section we describe the basic types used in Kotlin: numbers, characters, booleans, arrays, and strings.</p>
+			</article>
+		
+		<section class="main-section" id="numbers">	
+			<header>Numbers</header>
+			
+				<article>					
+					<p>Kotlin handles numbers in a way close to Java, but not exactly the same. For example, there are no implicit widening conversions for numbers, and literals are slightly different in some cases.</p>
+
+					<p>Kotlin provides the following built-in types representing numbers (this is close to Java):</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Type</th>
+								<th>Bit width</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Double</td>
+								<td>64</td>
+							</tr>
+							<tr>
+								<td>Float</td>
+								<td>32</td>
+							</tr>
+							<tr>
+								<td>Long</td>
+								<td>64</td>
+							</tr>
+							<tr>
+								<td>Int</td>
+								<td>32</td>
+							</tr>
+							<tr>
+								<td>Short</td>
+								<td>16</td>
+							</tr>
+							<tr>
+								<td>Byte</td>
+								<td>8</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p>Note that characters are not numbers in Kotlin.</p>
+			
+					<h3>Literal Constants</h3>
+					
+					<p>There are the following kinds of literal constants for integral values:</p>
+
+					<ul>
+						<li>Decimals: <code>123</code>
+					<ul>
+						<li>Longs are tagged by a capital <code>L</code>: <code>123L</code></li>
+					</ul>
+						</li>
+						<li>Hexadecimals: <code>0x0F</code></li>
+						<li>Binaries: <code>0b00001011</code></li>
+					</ul>
+					
+					<p>NOTE: Octal literals are not supported.</p>
+	
+					<p>Kotlin also supports a conventional notation for floating-point numbers:</p>
+	
+					<ul>
+						<li>Doubles by default: <code>123.5</code>, <code>123.5e10</code></li>
+						<li>Floats are tagged by <code>f</code> or <code>F</code>: <code>123.5f</code></li>
+					</ul>
+						
+					<h3 id="underscores-in-numeric-literals-since-11">Underscores in numeric literals (since 1.1)</h3>
+
+					<p>You can use underscores to make number constants more readable:</p>
+	
+					<div class="sample" data-highlight-only="" theme="idea">
+						<code class="language-kotlin">
+						val oneMillion = 1_000_000
+						val creditCardNumber = 1234_5678_9012_3456L
+						val socialSecurityNumber = 999_99_9999L
+						val hexBytes = 0xFF_EC_DE_5E
+						val bytes = 0b11010010_01101001_10010100_10010010
+						</code> 
+					</div>
+
+					<h3 id="representation">Representation</h3>
+
+					<p>On the Java platform, numbers are physically stored as JVM primitive types, unless we need a nullable number reference (e.g. <code>Int?</code>) or generics are involved. 
+					In the latter cases numbers are boxed.</p>
+
+					<p>Note that boxing of numbers does not necessarily preserve identity:</p>
+
+					<div class="sample" theme="idea">
+						<code class="language-kotlin">
+						fun main() {
+						//sampleStart
+						    val a: Int = 10000
+						    println(a === a) // Prints 'true'
+						    val boxedA: Int? = a
+						    val anotherBoxedA: Int? = a
+						    println(boxedA === anotherBoxedA) // !!!Prints 'false'!!!
+						//sampleEnd
+						}
+						</code> 
+					</div>
+					
+					<p>On the other hand, it preserves equality:</p>
+
+					<div class="sample" theme="idea">
+						 <code class="language-kotlin">
+						fun main() {
+						//sampleStart
+						    val a: Int = 10000
+						    println(a == a) // Prints 'true'
+						    val boxedA: Int? = a
+						    val anotherBoxedA: Int? = a
+						    println(boxedA == anotherBoxedA) // Prints 'true'
+						//sampleEnd
+						}
+						</code> 
+						
+					</div>
+					
+					<h3 id="explicit-conversions">Explicit Conversions</h3>
+					
+					<p>Due to different representations, smaller types are not subtypes of bigger ones.
+					If they were, we would have troubles of the following sort:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">
+						// Hypothetical code, does not actually compile:
+						val a: Int? = 1 // A boxed Int (java.lang.Integer)
+						val b: Long? = a // implicit conversion yields a boxed Long (java.lang.Long)
+						print(b == a) // Surprise! This prints "false" as Long's equals() checks whether the other is Long as well
+						</code> 
+					</div>
+					
+					<p>So equality would have been lost silently all over the place, not to mention identity.</p>
+
+					<p>As a consequence, smaller types are NOT implicitly converted to bigger types.
+					This means that we cannot assign a value of type <code>Byte</code> to an <code>Int</code> variable without an explicit conversion</p>
+
+					<div class="sample" theme="idea">
+						 <code class="language-kotlin">
+						fun main() {
+						//sampleStart
+						    val b: Byte = 1 // OK, literals are checked statically
+						    val i: Int = b // ERROR
+						//sampleEnd
+						}
+						</code> 
+					</div>
+					
+					<p>We can use explicit conversions to widen numbers</p>
+					
+					<div class="sample" theme="idea">
+						 <code class="language-kotlin">
+						fun main() {
+						    val b: Byte = 1
+						//sampleStart
+						    val i: Int = b.toInt() // OK: explicitly widened
+						    print(i)
+						//sampleEnd
+						}
+						</code> 
+					</div>
+					
+					<p>Every number type supports the following conversions:</p>
+					
+					<ul>
+						<li><code>toByte(): Byte</code></li>
+						<li><code>toShort(): Short</code></li>
+						<li><code>toInt(): Int</code></li>
+						<li><code>toLong(): Long</code></li>
+						<li><code>toFloat(): Float</code></li>
+						<li><code>toDouble(): Double</code></li>
+						<li><code>toChar(): Char</code></li>
+					</ul>
+					
+					<p>Absence of implicit conversions is rarely noticeable because the type is inferred from the context, and arithmetical operations are overloaded for appropriate conversions, for example</p>
+				
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">
+						val l = 1L + 3 // Long + Int =&gt; Long
+						</code> 
+					</div>
+
+					<h3 id="operations">Operations</h3>
+
+					<p>Kotlin supports the standard set of arithmetical operations over numbers, which are declared as members of appropriate classes (but the compiler optimizes the calls down to the corresponding instructions).
+					See <a href="operator-overloading.html">Operator overloading</a>.</p>
+
+					<p>As of bitwise operations, there're no special characters for them, but just named functions that can be called in infix form, for example:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">val x = (1 shl 2) and 0x000FF000
+						</code> 
+					</div>
+
+					<p>Here is the complete list of bitwise operations (available for <code>Int</code> and <code>Long</code> only):</p>
+
+					<ul>
+						<li><code>shl(bits)</code> – signed shift left (Java's <code>&lt;&lt;</code>)</li>
+						<li><code>shr(bits)</code> – signed shift right (Java's <code>&gt;&gt;</code>)</li>
+						<li><code>ushr(bits)</code> – unsigned shift right (Java's <code>&gt;&gt;&gt;</code>)</li>
+						<li><code>and(bits)</code> – bitwise and</li>
+						<li><code>or(bits)</code> – bitwise or</li>
+						<li><code>xor(bits)</code> – bitwise xor</li>
+						<li><code>inv()</code> – bitwise inversion</li>
+					</ul>
+
+					<h3 id="floating-point-numbers-comparison">Floating Point Numbers Comparison</h3>
+
+					<p>The operations on floating point numbers discussed in this section are:</p>
+
+					<ul>
+						<li>Equality checks: <code>a == b</code> and <code>a != b</code></li>
+						<li>Comparison operators: <code>a &lt; b</code>, <code>a &gt; b</code>, <code>a &lt;= b</code>, <code>a &gt;= b</code></li>
+						<li>Range instantiation and range checks: <code>a..b</code>, <code>x in a..b</code>, <code>x !in a..b</code></li>
+					</ul>
+					
+					<p>When the operands <code>a</code> and <code>b</code> are statically known to be <code>Float</code> or <code>Double</code> or their nullable counterparts (the type is 
+					declared or inferred or is a result of a <a href="#">smart cast</a>), the operations on the 
+					numbers and the range that they form follow the IEEE 754 Standard for Floating-Point Arithmetic.</p>
+
+					<p>However, to support generic use cases and provide total ordering, when the operands are <strong>not</strong> statically typed as 
+					floating point numbers 
+					(e.g. <code>Any</code>, <code>Comparable&lt;...&gt;</code>, a type parameter), the operations use the 
+					<code>equals</code> and <code>compareTo</code> implementations for <code>Float</code> and <code>Double</code>, which disagree with the standard, so that:</p>
+				
+					<ul>
+						<li><code>NaN</code> is considered equal to itself</li>
+						<li><code>NaN</code> is considered greater than any other element including <code>POSITIVE_INFINITY</code></li>
+						<li><code>-0.0</code> is considered less than <code>0.0</code></li>
+					</ul>
+				</article>
+			</section>
+			
+			<section class="main-section" id="characters">		
+				<header>Characters</header>
+				<article>
+
+					<p>Characters are represented by the type <code>Char</code>. They can not be treated directly as numbers</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">
+						fun check(c: Char) {
+						    if (c == 1) { // ERROR: incompatible types
+						        // ...
+						    }
+						}
+						</code> 
+					</div>
+
+					<p>Character literals go in single quotes: <code>'1'</code>.
+					Special characters can be escaped using a backslash.
+					The following escape sequences are supported: <code>\t</code>, <code>\b</code>, <code>\n</code>, <code>\r</code>, <code>\'</code>, <code>\"</code>, <code>\\</code> and <code>\$</code>.
+					To encode any other character, use the Unicode escape sequence syntax: <code>'\uFF00'</code>.</p>
+
+					<p>We can explicitly convert a character to an <code>Int</code> number:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">
+						fun decimalDigitValue(c: Char): Int {
+						    if (c !in '0'..'9')
+						        throw IllegalArgumentException("Out of range")
+						    return c.toInt() - '0'.toInt() // Explicit conversions to numbers
+						}
+						</code> 
+					</div>
+	
+					<p>Like numbers, characters are boxed when a nullable reference is needed. Identity is not preserved by the boxing operation.</p>
+			
+				</article>
+			</section>
+					
+			<section class="main-section" id="booleans">
+				<header>Booleans</header>	
+				<article>
+	
+					<p>The type <code>Boolean</code> represents booleans, and has two values: <em class="keyword">true</em> and <em class="keyword">false</em>.</p>
+
+					<p>Booleans are boxed if a nullable reference is needed.</p>
+
+					<p>Built-in operations on booleans include</p>
+
+					<ul>
+						<li><code>||</code> – lazy disjunction</li>
+						<li><code>&amp;&amp;</code> – lazy conjunction</li>
+						<li><code>!</code> - negation</li>
+						</ul>
+						
+				</article>
+			</section>
+			
+			<section class="main-section" id="arrays">
+				<header>Arrays</header>
+				<article>
+				
+					<p>Arrays in Kotlin are represented by the <code>Array</code> class, that has <code>get</code> and <code>set</code> functions (that turn into <code>[]</code> by operator overloading conventions), and <code>size</code> property, along with a few other useful member functions:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">
+						class Array&lt;T&gt; private constructor() {
+						    val size: Int
+						    operator fun get(index: Int): T
+						    operator fun set(index: Int, value: T): Unit
+						
+						    operator fun iterator(): Iterator&lt;T&gt;
+						    // ...
+						}
+						</code> 
+					</div>
+					
+					<p>To create an array, we can use a library function <code>arrayOf()</code> and pass the item values to it, so that <code>arrayOf(1, 2, 3)</code> creates an array <code>[1, 2, 3]</code>.
+					Alternatively, the <code>arrayOfNulls()</code> library function can be used to create an array of a given size filled with null elements.</p>
+					<p>Another option is to use the <code>Array</code> constructor that takes the array size and the function that can return the initial value
+					of each array element given its index:</p>
+					
+					<div class="sample" theme="idea">
+						 <code class="language-kotlin">
+						fun main() {
+						//sampleStart
+						    // Creates an Array&lt;String&gt; with values ["0", "1", "4", "9", "16"]
+						    val asc = Array(5, { i -&gt; (i * i).toString() })
+						    asc.forEach { println(it) }
+						//sampleEnd
+						}
+						</code> 
+					</div>
+					
+					<p>As we said above, the <code>[]</code> operation stands for calls to member functions <code>get()</code> and <code>set()</code>.</p>
+					
+					<p>Note: unlike Java, arrays in Kotlin are invariant. This means that Kotlin does not let us assign an <code>Array&lt;String&gt;</code>
+					to an <code>Array&lt;Any&gt;</code>, which prevents a possible runtime failure (but you can use <code>Array&lt;out Any&gt;</code>, 
+					see <a href="generics.html#type-projections">Type Projections</a>).</p>
+
+					<p>Kotlin also has specialized classes to represent arrays of primitive types without boxing overhead: <code>ByteArray</code>,
+
+					<code>ShortArray</code>, <code>IntArray</code> and so on. These classes have no inheritance relation to the <code>Array</code> class, but they
+					have the same set of methods and properties. Each of them also has a corresponding factory function:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">val x: IntArray = intArrayOf(1, 2, 3)
+						x[0] = x[1] + x[2]
+						</code> 
+					</div>
+					
+				</article>
+			</section>
+			
+			<section class="main-section" id="unsigned_integers">		
+				<header>Unsigned integers</header>
+				<article>
+
+					<blockquote class="note">
+						<p>Unsigned types are available only since Kotlin 1.3 and currently are <em>experimental</em>. See details <a href="#experimental-status-of-unsigned-integers">below</a></p>					
+					</blockquote>
+				
+					<p>Kotlin introduces following types for unsigned integers:</p>
+					
+					<ul>
+						<li><code>kotlin.UByte</code>: an unsigned 8-bit integer, ranges from 0 to 255</li>
+						<li><code>kotlin.UShort</code>: an unsigned 16-bit integer, ranges from 0 to 65535</li>
+						<li><code>kotlin.UInt</code>: an unsigned 32-bit integer, ranges from 0 to 2^32 - 1</li>
+						<li><code>kotlin.ULong</code>: an unsigned 64-bit integer, ranges from 0 to 2^64 - 1</li>
+					</ul>
+					
+					<p>Unsigned types support most of the operations of their signed counterparts.</p>
+
+					<blockquote class="note">
+						<p>Note that changing type from unsigned type to signed counterpart (and vice versa) is a <em>binary incompatible</em> change</p>
+					</blockquote>
+	
+					<p>Unsigned types are implemented using another experimental feature, namely <a href="inline-classes.html">inline classes</a>.</p>
+
+					<h3 "specialized-classes">Specialized classes</h3>
+
+					<p>Same as for primitives, each of unsigned type has corresponding type that represents array, specialized for that unsigned type:</p>
+
+					<ul>
+						<li><code>kotlin.UByteArray</code>: an array of unsigned bytes</li>
+						<li><code>kotlin.UShortArray</code>: an array of unsigned shorts</li>
+						<li><code>kotlin.UIntArray</code>: an array of unsigned ints</li>
+						<li><code>kotlin.ULongArray</code>: an array of unsigned longs</li>
+					</ul>
+	
+					<p>Same as for signed integer arrays, they provide similar API to <code>Array</code> class without boxing overhead.</p>
+
+					<p>Also, <a href="ranges.html">ranges and progressions</a> supported for <code>UInt</code> and <code>ULong</code> by classes <code>kotlin.ranges.UIntRange</code>, <code>kotlin.ranges.UIntProgression</code>, <code>kotlin.ranges.ULongRange</code>, <code>kotlin.ranges.ULongProgression</code></p>
+
+					<h3 "literals">Literals</h3>
+
+					<p>To make unsigned integers easier to use, Kotlin provides an ability to tag an integer literal with a suffix indicating a specific unsigned type (similarly to Float/Long):</p>
+
+					<ul>
+						<li>suffixes <code>u</code> and <code>U</code> tag literal as unsigned. Exact type will be determined based on the expected type. If no expected type is provided, <code>UInt</code> or <code>ULong</code> will be chosen based on the size of literal</li>
+					</ul>
+	
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">
+						val b: UByte = 1u  // UByte, expected type provided
+						val s: UShort = 1u // UShort, expected type provided
+						val l: ULong = 1u  // ULong, expected type provided
+						
+						val a1 = 42u // UInt: no expected type provided, constant fits in UInt
+						val a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't fit in UInt
+						</code> 
+					</div>
+
+					<ul>
+						<li>suffixes <code>uL</code> and <code>UL</code> explicitly tag literal as unsigned long.</li>
+					</ul>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">val a = 1UL // ULong, even though no expected type provided and constant fits into UInt
+						</code> 
+					</div>
+		
+					<h3 "experimental-status-of-unsigned-integers">Experimental status of unsigned integers</h3>
+
+					<p>The design of unsigned types is experimental, meaning that this feature is moving fast and no compatibility guarantees are given. When using unsigned arithmetics in Kotlin 1.3+, warning will be reported, indicating that this feature is experimental. To remove warning, you have to opt-in for experimental usage of unsigned types.</p>
+
+					<p>There are two possible ways to opt-in for unsigned types: with marking your API as experimental too, or without doing that.</p>
+
+					<ul>
+						<li>to propagate experimentality, either annotate declarations which use unsigned integers with <code>@ExperimentalUnsignedTypes</code> or pass <code>-Xexperimental=kotlin.ExperimentalUnsignedTypes</code> to the compiler (note that the latter will make <em>all</em> declaration in compiled module experimental)</li>
+						<li>to opt-in without propagating experimentality, either annotate declarations with <code>@UseExperimental(ExperimentalUnsignedTypes::class)</code> or pass <code>-Xuse-experimental=kotlin.ExperimentalUnsignedTypes</code></li>
+					</ul>
+
+					<p>It's up to you to decide if your clients have to explicitly opt-in into usage of your API, but bear in mind that unsigned types are an experimental feature, so API which uses them can be suddenly broken due to changes in language.</p>
+
+					<p>See also or Experimental API <a href="https://github.com/Kotlin/KEEP/blob/master/proposals/experimental.md">KEEP</a> for technical details.</p>
+
+					<h3 "further-discussion">Further discussion</h3>
+
+					<p>See <a href="https://github.com/Kotlin/KEEP/blob/master/proposals/unsigned-types.md">language proposal for unsigned types</a> for technical details and further discussion.</p>
+			
+				</article>
+			</section>				
+					
+			<section class="main-activity" id="strings">
+'				<header>Strings</header>
+				<article>	
+					<p>Strings are represented by the type <code>String</code>. Strings are immutable.
+					Elements of a string are characters that can be accessed by the indexing operation: <code>s[i]</code>.
+					A string can be iterated over with a <em class="keyword">for</em>-loop:</p>
+
+					<div class="sample" theme="idea">
+						<code class="language-kotlin">
+						fun main() {
+						val str = "abcd"
+						//sampleStart
+						for (c in str) {
+						    println(c)
+						}
+						//sampleEnd
+						}
+						</code> 
+					</div>
+
+					<p>You can concatenate strings using the <code>+</code> operator. This also works for concatenating strings with values of other types, as long
+					as the first element in the expression is a string:</p>
+
+					<div class="sample" theme="idea">
+						<code class="language-kotlin">
+						fun main() {
+						//sampleStart
+						val s = "abc" + 1
+						println(s + "def")
+						//sampleEnd
+						}
+						</code> 
+					</div>
+	
+					<p>Note that in most cases using <a href="#string-templates">string templates</a> or raw strings is preferable to string concatenation.</p>
+		
+					<h3 "string-literals">String Literals</h3>
+
+					<p>Kotlin has two types of string literals: escaped strings that may have escaped characters in them and raw strings that can contain newlines and arbitrary text. An escaped string is very much like a Java string:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">val s = "Hello, world!\n"
+						</code> 
+					</div>
+
+					<p>Escaping is done in the conventional way, with a backslash. See <a href="#characters">Characters</a> above for the list of supported escape sequences.</p>
+
+					<p>A raw string is delimited by a triple quote (<code>"""</code>), contains no escaping and can contain newlines and any other characters:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">
+						val text = """
+					    for (c in "foo")
+					        print(c)
+						"""
+						</code> 
+					</div>
+		
+					<p>You can remove leading whitespace with <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html"><code>trimMargin()</code></a> function:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						 <code class="language-kotlin">
+						val text = """
+						    |Tell me and I forget.
+						    |Teach me and I remember.
+						    |Involve me and I learn.
+						    |(Benjamin Franklin)
+						    """.trimMargin()
+						</code> 
+					</div>
+					
+					<p>By default <code>|</code> is used as margin prefix, but you can choose another character and pass it as a parameter, like <code>trimMargin("&gt;")</code>.</p>
+
+					<h3 "string-templates">String Templates</h3>
+
+					<p>Strings may contain template expressions, i.e. pieces of code that are evaluated and whose results are concatenated into the string.
+					A template expression starts with a dollar sign ($) and consists of either a simple name:</p>
+
+					<div class="sample" theme="idea">
+						 <code class="language-kotlin">fun main() {
+						//sampleStart
+						    val i = 10
+						    println("i = $i") // prints "i = 10"
+						//sampleEnd
+						}
+						</code> 
+					</div>
+	
+					<p>or an arbitrary expression in curly braces:</p>
+
+					<div class="sample" theme="idea">
+						<code class="language-kotlin">
+						fun main() {
+						//sampleStart
+						    val s = "abc"
+						    println("$s.length is ${s.length}") // prints "abc.length is 3"
+						//sampleEnd
+						}
+						</code> 
+					</div>
+
+					<p>Templates are supported both inside raw strings and inside escaped strings.
+					If you need to represent a literal <code>$</code> character in a raw string (which doesn't support backslash escaping), you can use the following syntax:</p>
+
+					<div class="sample" data-highlight-only="" theme="idea">
+						<code class="language-kotlin">
+						val price = """
+						${'$'}9.99
+						"""
+						</code>
+					</div>
+      	</article>		
+		</section>		
+		
+		<section class="main-section" id="next_steps">
+			<header>Next Steps</header>
+			<article>				
+			
+				<ul>
+					<li>The <a href="/docs/tutorials/httpservlets.html">Creating Web Applications with Http Servlets</a> and
+					<a href="/docs/tutorials/spring-boot-restful.html">Creating a RESTful Web Service with Spring Boot</a> tutorials
+					show you how you can build and run very small Web applications in Kotlin.</li>
+					<li>For a more in-depth introduction to the language, check out the <a href="/docs/reference/index.html">reference documentation</a> on this site and
+					<a href="/docs/tutorials/koans.html">Kotlin Koans</a>.</li>
+				</ul>
+							
+			</article>		
+		</section>
+			
+	</main>	
+	
+</body>

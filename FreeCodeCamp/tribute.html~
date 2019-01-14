@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+	<title>FCC Projetc Tribute Page</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body {
+		margin-top: 60px;
+		}
+		
+		h1 {
+			color: black;
+		   font-size: 79px;
+		   text-align:center;
+		   font-family:Times New Roman;
+		  }
+		
+		h4 {
+			text-align:center;
+		}
+		
+		div {
+			background-color: #D3D3D3;
+		   margin-left: 50px;
+		   margin-right:50px;
+		}
+		
+		body {
+		background-color:white;
+		}
+
+		div div {
+			border-width:1px;
+	      border-style: solid;
+	      border-color: black;
+	      position: relative;
+	      text-align: center; 
+		   background-color: white;
+		   margin-bottom: 10px;
+		   margin-left 70px;
+		   margin-right: 70px;
+		}
+		
+		.small-letters {
+		font-size: 15px;
+		}
+               
+	</style>
+</head>
+
+<body>
+  <main> id="main">
+  <h1> David L. Clarke</h1>
+    <h2 class="text-center"> <em>The man who transformed Archaeology into a science</em> </h2>
+  <div class="text-center">
+   <img id="" src="https://upload.wikimedia.org/wikipedia/en/c/c3/David_Clarke_archaeologist.jpg" width="500" height="630" alt="David Clarke">
+    <p Class="text-center">David L. Clarke in England </p>
+    </div>
+
+       
+   <h4> <em>Here's a time line of Dr. David L. Clarke <em> </h4>
+     <ul>
+       <li>Born in November 1937</li>
+       <li>Became Fellow in Peterhouse, Cambridge, 1966</li>
+       <li>Began his teachings and writing in Analythical Archaeology in 1967</li>
+       <li> In 1968 releases his groundbreaking work where was a heavy influence in the european Archaeology. The book stated Archaeolgy is Archaeology is Archaeology. Opposing to those who tried to tie Archeology as a subscience to Anthropology. </li>
+       <li> In 1970, publishes his Phd thesis on British and Irish Bell Beaker </li>
+       <li> By 1970, his work had demonstrated the importance of System Theory, Quantification, Scientific Reasoning and computer models.</li>
+       <li> In 1972 publishes Models in Archaeology </li>
+       <li> In 1976, Dies from a thombosis </li>
+       <li> In 1977, his work Spatial Archaeology is published after his death. </li>
+       <li> In 1979, Collected papers are realeased of all the work unpublished by David L. Clarke</li>
+       <li> notable student's: Keith Muckelroy, Ian Holder and many others </li>
+       </ul>
+     <h3> The impact of David L. Clarke's death on the university. </h3>
+       <p> <span dir="ltr"> <em>"His fears were realized as the exam started, based on the kinds of questions he was getting and the kinds of responses he received for his lame answers. But the exam had not quite yet turned into the bloodbath it would presumably become when the Department Secretary came into the conference room, interrupting the examination, to make an important announcement. 
+
+“David Clarke is Dead.”
+
+David Clarke was revered in this department, and the news was so devastating that the examiners … senior faculty all … forgot what they were doing and wandered off in a daze. Later, no one could recollect how the exam had gone (except F.G. of course, who was left rather hanging by this event).
+
+Since no one could really remember what had happened, they really couldn’t fail him. So they let him stay. F.G. eventually became a credit to the department. In his own way." 
+         </em> </span></p>
+     <p class="text-center"> <em> - by <a href = "http://scienceblogs.com/gregladen/2008/11/14/david-l-clarke-and-analytical/"> Greg Laden </a> writer of science blogs </em> </p>
+     
+     <h4 class="text-center"> If you have time you should read about this increndible human being at his <a href="https://en.wikipedia.org/wiki/David_L._Clarke"> Wikipedia </a> profile.
+  </main>>
+     <p Class="small-letters" style="text-align: center"> written and coded by <a href="https://codepen.io/JT_Cerqueira/#"> J.T. Cerqueira</a>. </p>
+</body>
